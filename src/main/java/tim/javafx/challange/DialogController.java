@@ -23,6 +23,6 @@ public class DialogController {
         String last = lastCtrl.getText().trim().toLowerCase();
         String phone = phoneCtrl.getText().trim().toLowerCase();
         String notes = noteCtrl.getText().trim().toLowerCase();
-        return new Contact(name, last, phone, notes);
+       return new Contact(name, last, phone, notes);
     }
 }

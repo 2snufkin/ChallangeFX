@@ -18,12 +18,12 @@ public class HelloApplication extends Application {
     }
 
     @Override
-    public void init() throws Exception {
+    public void init() {
         Data.getInstance().load();
     }
 
     @Override
-    public void stop() throws Exception {
+    public void stop()  {
         Data.getInstance().save();
 
     }

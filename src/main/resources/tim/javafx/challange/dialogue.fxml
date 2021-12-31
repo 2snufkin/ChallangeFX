@@ -10,17 +10,16 @@
             fx:controller="tim.javafx.challange.DialogController"
             prefHeight="300.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
     <header>
-      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="259.0" prefWidth="480.0">
-         <children>
-            <Label layoutX="41.0" layoutY="74.0" text="Name" />
-            <Label layoutX="46.0" layoutY="110.0" text="Last" />
-            <Label layoutX="39.0" layoutY="151.0" text="Phone" />
-            <Label layoutX="275.0" layoutY="14.0" text="Notes" />
-            <TextField fx:id="nameCtrl" layoutX="98.0" layoutY="70.0" />
-            <TextField fx:id="lastCtrl" layoutX="98.0" layoutY="106.0" />
-            <TextField fx:id="phoneCtrl" layoutX="98.0" layoutY="147.0" />
-            <TextArea fx:id="noteCtrl" layoutX="266.0" layoutY="47.0" prefHeight="200.0" prefWidth="200.0" />
-         </children></AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="259.0" prefWidth="480.0">
+            <Label layoutX="41.0" layoutY="74.0" text="Name"/>
+            <Label layoutX="46.0" layoutY="110.0" text="Last"/>
+            <Label layoutX="39.0" layoutY="151.0" text="Phone"/>
+            <Label layoutX="275.0" layoutY="14.0" text="Notes"/>
+            <TextField fx:id="nameCtrl" layoutX="98.0" layoutY="70.0"/>
+            <TextField fx:id="lastCtrl" layoutX="98.0" layoutY="106.0"/>
+            <TextField fx:id="phoneCtrl" layoutX="98.0" layoutY="147.0"/>
+            <TextArea fx:id="noteCtrl" layoutX="266.0" layoutY="47.0" prefHeight="200.0" prefWidth="200.0"/>
+        </AnchorPane>
     </header>
     <content>
       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0" />

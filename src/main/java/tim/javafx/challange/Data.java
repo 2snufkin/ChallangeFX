@@ -9,12 +9,15 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.logging.Logger;
 
 public class Data {
-    private final   String fileName = "userData.txt";
+    private static final   String FILENAME = "userData.txt";
+    private static final   Logger LOGGER = Logger.getLogger(Data.class.getName());
+
     private static final Data instance = new Data();
-    private final Path path = Paths.get(fileName);
-    private ObservableList<Contact> contactList;
+    private final Path path = Paths.get(FILENAME);
+    private final ObservableList<Contact> contactList;
 
 
     private Data() {
@@ -40,7 +43,8 @@ public class Data {
 
         } 
         catch (IOException e){
-            System.out.println(e.getStackTrace());
+            LOGGER.severe("problem with loading the data ");
+            e.getStackTrace();
             
         }
 
@@ -53,7 +57,6 @@ public class Data {
     public boolean addContact(Contact e){
         if (e!=null){
             contactList.add(e);
-            save();
             return true;
         }
         return false;
@@ -62,14 +65,13 @@ public class Data {
     public boolean removeUser(Contact c){
         if (c!=null){
             contactList.remove(c);
-            System.out.println("removed");
-            return true;
+             return true;
         }
         return false;
     }
 
     public void save(){
-        try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName))){
+        try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(FILENAME))){
             for (Contact contact : contactList) {
                 String name = contact.getName();
                 String last = contact.getLastname();
@@ -81,7 +83,9 @@ public class Data {
                 bufferedWriter.newLine();
             }
         } catch(IOException e){
-            System.out.println("Problem with writing ");
+            LOGGER.severe("problem with saving the data " );
+            e.getStackTrace();
+
 
         }
     }
